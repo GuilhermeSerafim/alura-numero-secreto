@@ -1,3 +1,4 @@
+const elementoChute = document.getElementById('chute');
 const SpeechRecognition =
 //window é um objeto global que representa a janela do navegador.
   window.SpeechRecognition || window.webkitSpeechRecognition; //Determina QUAL implementação da API será usada pelo no navegador usado
@@ -11,11 +12,13 @@ recognition.start();
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(e) {
-    console.log(e.results[0][0].transcript)
-    const capturaDeVoz = e.results[0][0].transcript;
-    if(capturaDeVoz) {
-        boxVoceDisse.textContent = capturaDeVoz;
-    } else {
-        boxVoceDisse.textContent = 'erro';
-    }
+    chute = e.results[0][0].transcript;
+    exibeChuteNaTela(chute);
+}
+
+function exibeChuteNaTela(chute) {
+    elementoChute.innerHTML = `
+        <div>Você disse</div>
+        <span class="box">${chute}</span>
+    `
 }
