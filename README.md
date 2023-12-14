@@ -1,4 +1,4 @@
-# Numero-Secreto 🎲🔐
+# Numero-Secreto 🔢<img src="https://cdn.pixabay.com/animation/2023/06/13/15/12/15-12-30-710_512.gif" alt="Cadeado" width="30" height="30">
 
 Neste jogo, os participantes tentam adivinhar um número secreto, utilizando reconhecimento de voz.
 
