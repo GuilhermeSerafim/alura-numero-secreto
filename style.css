@@ -3,7 +3,8 @@
     --font-family: 'Exo', sans-serif;
     --bg-color: #F3F8FF;
     --primary-color: #49108B; 
-    --chute: #E26EE5;
+    --numero-chutado: #7E30E1;
+    --bg-itens: #E26EE5;
 }
 
 body {
@@ -33,10 +34,11 @@ h3 {
 }
 
 .box {
-    border: 2px solid var(--chute);
+    border: 2px solid var(--numero-chutado);
     border-radius: 20px;
     display: inline-block;
     font-size: 3em;
     padding: 10px;
     margin: 20px;
+    box-shadow: 5px 8px var(--bg-itens);
 }
