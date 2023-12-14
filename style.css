@@ -4,7 +4,7 @@
     --bg-color: #F3F8FF;
     --primary-color: #49108B; 
     --numero-chutado: #7E30E1;
-    --bg-itens: #E26EE5;
+    --sombra: #E26EE5;
 }
 
 body {
@@ -40,5 +40,5 @@ h3 {
     font-size: 3em;
     padding: 10px;
     margin: 20px;
-    box-shadow: 5px 8px var(--bg-itens);
+    box-shadow: 5px 8px var(--sombra);
 }
