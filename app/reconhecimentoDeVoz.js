@@ -1,7 +1,7 @@
 const elementoChute = document.getElementById('chute');
 const SpeechRecognition =
-//window é um objeto global que representa a janela do navegador.
-  window.SpeechRecognition || window.webkitSpeechRecognition; //Determina QUAL implementação da API será usada pelo no navegador usado
+    //window é um objeto global que representa a janela do navegador.
+    window.SpeechRecognition || window.webkitSpeechRecognition; //Determina QUAL implementação da API será usada pelo no navegador usado
 
 let boxVoceDisse = document.querySelector('.box');
 
