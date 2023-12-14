@@ -1,4 +1,4 @@
-# Repositório "Numero-Secreto" 🎲🔐
+# Numero-Secreto 🎲🔐
 
 Neste jogo, os participantes tentam adivinhar um número secreto, utilizando reconhecimento de voz.
 
