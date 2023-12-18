@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400&display=swap');
+
 :root {
     --font-family: 'Exo', sans-serif;
     --bg-color: #F3F8FF;
-    --primary-color: #49108B; 
+    --primary-color: #49108B;
     --numero-chutado: #7E30E1;
     --sombra: #E26EE5;
 }
@@ -45,4 +46,23 @@ h3 {
     padding: 10px;
     margin: 20px;
     box-shadow: 5px 8px var(--sombra);
+}
+
+.btn-jogar {
+    padding: 15px 15px;
+    border: 2px solid var(--sombra);
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 2px 4px var(--sombra);
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.btn-jogar:hover {
+    border-color: var(--primary-color);
+    box-shadow: 2px 4px var(--primary-color);
+    color: var(--sombra);
 }

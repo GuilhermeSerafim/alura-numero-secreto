@@ -23,3 +23,6 @@ function exibeChuteNaTela(chuteFalado) {
         <span class="box">${chuteFalado}</span>
     `
 }
+
+// Quando nossa função acabar, ligue novamente
+recognition.addEventListener('end', () => recognition.start());
