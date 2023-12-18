@@ -2,11 +2,11 @@ function verificaSeOChutePossuiUmValorValido(chuteEmFormatoDeString) {
     // para converter o chute em string usamos o sinal =+
     const numero =+ chuteEmFormatoDeString;
     if (chuteNaoEUmNumero(numero)) {
-        console.log('Não é um número')
+        elementoChute.innerHTML += '<div>Não é um número</div>'
     }
     
     if(numeroForaDoRange(numero)) {
-        console.log(`O valor precisa estar entre ${menorvalor} e ${maiorValor}`);
+        elementoChute.innerHTML += `<div>O valor precisa estar entre ${menorvalor} e ${maiorValor}</div>`;
     }
 }
 
