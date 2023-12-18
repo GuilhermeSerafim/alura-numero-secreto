@@ -12,14 +12,14 @@ recognition.start();
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(eventoDeFala) {
-    chute = eventoDeFala.results[0][0].transcript;
-    exibeChuteNaTela(chute);
-    verificaSeOChutePossuiUmValorValido(chute);
+    chuteFalado = eventoDeFala.results[0][0].transcript;
+    exibeChuteNaTela(chuteFalado);
+    verificaSeOChutePossuiUmValorValido(chuteFalado);
 }
 
-function exibeChuteNaTela(chute) {
+function exibeChuteNaTela(chuteFalado) {
     elementoChute.innerHTML = `
         <div>Você disse</div>
-        <span class="box">${chute}</span>
+        <span class="box">${chuteFalado}</span>
     `
 }

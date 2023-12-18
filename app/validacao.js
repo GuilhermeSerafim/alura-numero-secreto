@@ -1,5 +1,6 @@
-function verificaSeOChutePossuiUmValorValido(chute) {
-    const numero = + chute;
+function verificaSeOChutePossuiUmValorValido(chuteEmFormatoDeString) {
+    // para converter o chute em string usamos o sinal =+
+    const numero =+ chuteEmFormatoDeString;
     if (chuteNaoEUmNumero(numero)) {
         console.log('Não é um número')
     }
