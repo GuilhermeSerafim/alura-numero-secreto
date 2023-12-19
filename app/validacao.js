@@ -1,7 +1,19 @@
 function verificaSeOChutePossuiUmValorValido(chuteEmFormatoDeString) {
-    // Erros
-    // para converter o chute em string usamos o sinal =+
     const numero = + chuteEmFormatoDeString;
+    
+    // Game Over
+    // Pegamos diretamente o chute em forma de string
+    if(fimDeJogo(chuteEmFormatoDeString)) {
+        document.body.innerHTML = 
+        `
+            <h2>Game Over</h2>
+            <button id='jogar-novamente' class='btn-jogar'>Jogar novamente</button>
+        `
+        return;
+    }
+
+    // Erros
+    // Para converter o chute em string usamos o sinal =+
     if (chuteNaoEUmNumero(numero)) {
         elementoChute.innerHTML += '<div>Não é um número</div>'
         // Early return
@@ -46,3 +58,7 @@ document.addEventListener('click', evento => {
         window.location.reload();
     }
 })
+
+function fimDeJogo(eventoFala) {
+    return eventoFala == "game over";
+}

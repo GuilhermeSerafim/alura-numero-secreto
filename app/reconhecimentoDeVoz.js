@@ -4,6 +4,7 @@ const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition; //Determina QUAL implementação da API será usada pelo no navegador usado
 
 let boxVoceDisse = document.querySelector('.box');
+let possoFalar = true;
 
 //Instância do reconhecimento de voz
 const recognition = new SpeechRecognition();
@@ -13,8 +14,14 @@ recognition.addEventListener('result', onSpeak);
 
 function onSpeak(eventoDeFala) {
     chuteFalado = eventoDeFala.results[0][0].transcript;
-    exibeChuteNaTela(chuteFalado);
-    verificaSeOChutePossuiUmValorValido(chuteFalado);
+    if(possoFalar) {     
+        exibeChuteNaTela(chuteFalado);
+        verificaSeOChutePossuiUmValorValido(chuteFalado);
+        // Não pode falar até que reload a pag com o bt de jogar nvoamente
+        if(chuteFalado == "game over" || chuteFalado == numeroSecreto) {
+            possoFalar = false;
+        }
+    }
 }
 
 function exibeChuteNaTela(chuteFalado) {
