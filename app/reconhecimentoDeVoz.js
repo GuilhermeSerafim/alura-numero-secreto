@@ -13,14 +13,16 @@ recognition.start();
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(eventoDeFala) {
+    //Variavel global
     chuteFalado = eventoDeFala.results[0][0].transcript;
-    if(possoFalar) {     
+    // Exibição e validação
+    if (possoFalar) {
         exibeChuteNaTela(chuteFalado);
         verificaSeOChutePossuiUmValorValido(chuteFalado);
-        // Não pode falar até que reload a pag com o bt de jogar nvoamente
-        if(chuteFalado == "game over" || chuteFalado == numeroSecreto) {
-            possoFalar = false;
-        }
+    }
+    // Não pode falar até que reload a pag com o bt de jogar nvoamente
+    if (chuteFalado == "game over" || chuteFalado == numeroSecreto) {
+        possoFalar = false;
     }
 }
 
@@ -32,4 +34,9 @@ function exibeChuteNaTela(chuteFalado) {
 }
 
 // Quando nossa função acabar, ligue novamente
-recognition.addEventListener('end', () => recognition.start());
+recognition.addEventListener('end', () => {
+    // Reconhecimento de voz
+    if(!chuteFalado == "game over" || chuteFalado == numeroSecreto) {
+        recognition.start()
+    }
+});
