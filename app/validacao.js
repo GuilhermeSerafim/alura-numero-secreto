@@ -4,9 +4,10 @@ function verificaSeOChutePossuiUmValorValido(chuteEmFormatoDeString) {
     // Game Over
     // Pegamos diretamente o chute em forma de string
     if(fimDeJogo(chuteEmFormatoDeString)) {
+        document.body.style.backgroundColor = "#49108B";
         document.body.innerHTML = 
         `
-            <h2>Game Over</h2>
+            <h4>Game Over</h4>
             <button id='jogar-novamente' class='btn-jogar'>Jogar novamente</button>
         `
         return;

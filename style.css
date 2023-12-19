@@ -18,6 +18,7 @@ body {
     justify-content: center;
     text-align: center;
     font-family: var(--font-family);
+    transition: 0.7s;
 }
 
 h1 {
@@ -31,6 +32,11 @@ h2 {
 h3 {
     font-size: 1.8em;
     margin-top: 20px;
+}
+
+h4 {
+    font-size: 4em;
+    color: #F3F8FF;
 }
 
 .mensagem {
